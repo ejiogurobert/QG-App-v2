@@ -14,7 +14,7 @@ function quoteOptions(e) {
   selectedOption = e.target.value;
 }
 
-async function showDisplay(e) {
+async function showDisplay() {
   if (!selectedOption) {
     alert("You need to select a category");
     return;

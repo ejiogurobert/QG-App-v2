@@ -26,7 +26,8 @@ async function showDisplay() {
 
   if (selectedOption === "trump") {
     //    Fetching Random Trump Quote
-    spinner.classList.remove('hidden')
+    spinner.classList.remove('hidden');
+    // spinner.style.color = 'white';
     try {
       const response = await fetch(endpoint);
       if (response.status === 200) {
@@ -55,6 +56,10 @@ function displayTrumpQuote(data) {
 }
 
 // Remove Display Button 
-function cancel(params) {
-    displayBox.style.display = 'none'
+function cancel() {
+    displayBox.style.display = 'none';
+    body.style.background = 'white'
+    dropdown.style.background = 'white'
+    // dropdown.style.back = 'white'
+    
 }

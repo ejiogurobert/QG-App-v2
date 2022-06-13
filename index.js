@@ -3,6 +3,8 @@ const endpoint = "https://api.whatdoestrumpthink.com/api/v1/quotes/random";
 const spinner = document.querySelector(".spinner");
 const generateBtn = document.querySelector(".btn-generate");
 const displayBox = document.querySelector(".generated-quote_section");
+const body = document.querySelector("body");
+const dropdown = document.querySelector(".dropdown");
 const cancelButton = document.querySelector('.exit-container');
 let selectedOption;
 
@@ -45,6 +47,10 @@ function displayTrumpQuote(data) {
   const quoteText = document.querySelector("#js-quote-text");
   quoteText.innerHTML = `<p>${data.message}</p>`;
    displayBox.style.display = 'block';
+   body.style.background = 'rgba(0, 0, 0, 0.5)';
+   dropdown.style.background = 'rgba(0, 0, 0, 0)';
+   dropdown.style.border = '2px solid rgba(0, 0, 0, 0.2)';
+   dropdown.style.boxShadow = 'none';
    spinner.classList.add('hidden')
 }
 

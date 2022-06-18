@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.users {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.user-section{
+    width: 100%;
+}
+

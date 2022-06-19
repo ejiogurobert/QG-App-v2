@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="users.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="users.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,27 +14,38 @@
       rel="stylesheet"
     />
     <title>QG-App v2 - Users</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="users">
-        <div class="user-section">
-            <form class="user-form" action="">
-                <h1>
-                    <label for="user-quote">
-                        Add Your "Quote"
-                    </label>
-                </h1>
-                <textarea class="user-quote" name="user-quote" id="user-quote" cols="30" rows="10" placeholder="Please type your quote here"></textarea>
-                <div>
-                    <input class="btn-submit" type="submit">
-                </div>
-            </form>
-            <a href="./index.html">
-                <h2 class="home">
-                  Go Back
-                </h2>
-               </a>
-        </div>
+      <div class="user-section">
+        <form class="user-form" action="">
+          <h1>Add Your "Quote"</h1>
+          <div class="name">
+            <label for="firstname">First Name</label>
+            <input type="text" value="" />
+          </div>
+          <div class="name">
+            <label for="lastname">Last Name</label>
+            <input type="text" value="" />
+          </div>
+          <textarea
+            class="user-quote"
+            name="user-quote"
+            id="user-quote"
+            cols="30"
+            rows="10"
+            placeholder="Please type your quote here"
+          ></textarea>
+          <div>
+            <input class="btn-submit" type="submit" />
+          </div>
+        </form>
+        <a href="./index.html">
+          <h2 class="home">
+            Go Back
+          </h2>
+        </a>
+      </div>
     </section>
-</body>
+  </body>
 </html>

@@ -21,7 +21,7 @@ body {
 
 .user-form {
     width: 100%;
-    margin-top: 20%;
+    margin-top: 15%;
     text-align: center;
 }
 
@@ -79,4 +79,8 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.name {
+    text-align: left;
 }

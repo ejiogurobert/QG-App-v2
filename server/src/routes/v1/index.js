@@ -11,8 +11,9 @@ router.get('/', (req, res) => {
     })
 });
 
-router.post('/quote', controller.createQuote)
-router.get('/random-quote', controller.fetchRandomQuote)
-router.patch('/quote/:id', controller.updateQuoteStatus)
+router.post('/quote', controller.createQuote);
+router.get('/random-quote', controller.fetchRandomQuote);
+router.get('/quote', controller.fetchAllQuotes);
+router.patch('/quote/:id', controller.updateQuoteStatus);
 
 export default router;

@@ -18,6 +18,11 @@ export const fetchRandomQuote = async () => {
     return randomQuote;
 }
 
+export const fetchAllQuotes = async () => {
+    const allQuotes = await db.any(quoteQueries.fetchAllQuotes);
+    return allQuotes;
+}
+
 export const updateQuoteStatus = async (status, id) => {
     const payload = [status, id]
     const [quoteStatus] = await db.any(quoteQueries.updateQuoteStatus, payload);

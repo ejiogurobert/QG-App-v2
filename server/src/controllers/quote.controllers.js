@@ -30,6 +30,20 @@ export const fetchRandomQuote = async (req, res, next) => {
     }
 }
 
+export const fetchAllQuotes = async (req, res, next) => {
+    try {
+        const allQuotes = await service.fetchAllQuotes();
+        return res.status(200).json({
+            code: 200,
+            status: 'success',
+            message: 'Quote fetched successfully',
+            data: allQuotes
+        })
+    } catch (error) {
+        console.log('Error ocurred fetching quote', error.message);
+    }
+}
+
 export const updateQuoteStatus = async (req, res, next) => {
     try {
         const { body: { status }, params: { id } } = req;

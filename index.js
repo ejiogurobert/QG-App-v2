@@ -7,11 +7,13 @@ const body = document.querySelector("body");
 const dropdown = document.querySelector(".dropdown");
 const cancelButton = document.querySelector('.exit-container');
 const serverUrl = 'http://127.0.0.1:1918/api/v1';
+
 let selectedOption;
 
 categorySelect.addEventListener("click", quoteOptions);
 generateBtn.addEventListener("click", showDisplay);
-cancelButton.addEventListener('click', cancel)
+cancelButton.addEventListener('click', cancel);
+
 
 function quoteOptions(e) {
   selectedOption = e.target.value;
@@ -97,4 +99,6 @@ function cancel() {
     body.style.background = 'white'
     dropdown.style.background = 'white'
 }
+
+
 

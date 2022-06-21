@@ -18,15 +18,23 @@
   <body>
     <section class="users">
       <div class="user-section">
-        <form class="user-form" action="">
+        <form class="user-form" action="javascript:void(0)">
           <h1>Add Your "Quote"</h1>
           <div class="name">
-            <label for="firstname">First Name</label>
-            <input type="text" value="" />
+            <div class="name-type">
+                <label for="first-name">First Name</label>
+            </div>
+            <div>
+                <input id="first-name" required type="text" value="" />
+            </div>
           </div>
           <div class="name">
-            <label for="lastname">Last Name</label>
-            <input type="text" value="" />
+            <div class="name-type">
+                <label for="last-name">Last Name </label>
+            </div>
+           <div>
+            <input id="last-name" type="text" value="" />
+           </div>
           </div>
           <textarea
             class="user-quote"
@@ -40,7 +48,7 @@
             <input class="btn-submit" type="submit" />
           </div>
         </form>
-        <a href="./index.html">
+        <a href="./users.js">
           <h2 class="home">
             Go Back
           </h2>
@@ -48,4 +56,5 @@
       </div>
     </section>
   </body>
+  <script src="./users.js"></script>
 </html>

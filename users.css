@@ -21,7 +21,7 @@ body {
 
 .user-form {
     width: 100%;
-    margin-top: 15%;
+    margin-top: 10%;
     text-align: center;
 }
 
@@ -83,4 +83,29 @@ a {
 
 .name {
     text-align: left;
+    font-size: 1.2rem;
+    display: flex;
+    flex: 1;
+}
+
+.name input {
+    /* width: 30%; */
+    margin: 1rem auto;
+    resize: none;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #ccc;
+    line-height: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px; 
+    font-family: 'Playfair Display', serif;
+    font-size: large;
+    font-style: italic;
+    padding: 10px;
+    outline: none;
+    margin-left: 1rem;
+}
+
+.name-type {
+    padding: 25px 0;
 }

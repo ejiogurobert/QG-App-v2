@@ -30,12 +30,14 @@ export default {
 
     fetchAllQuotes: `
     SELECT 
+    quotes.id, 
     quotes.content, 
     quotes.status,
     users.first_name,
     users.last_name
 	FROM quotes
     JOIN users ON users.id = quotes.user_id
+    WHERE status='pending'
 	ORDER BY quotes.created_at DESC;
     `
 };

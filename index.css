@@ -224,3 +224,43 @@ label {
     display: flex;
     justify-content: space-between;
   }
+
+  /* ==== Media Queries ==== */
+@media (max-width: 1282px) {
+  .users {
+    width: 50%;
+  }
+  .btn-generate {
+    width: 50%;
+  }
+}
+
+  @media (max-width: 1000px) {
+    .users {
+      width: 70%
+    }
+    .btn-generate {
+      width: 70%;
+      font-size: .7rem;
+    }
+  }
+@media (max-width: 642px) {
+  .dropdown {
+    font-size: medium;
+  }
+}
+  @media (max-width: 550px) {
+
+    .users {
+      width: 80%;
+      font-size: 1rem;
+    }
+    .btn-generate {
+      width: 80%;
+      margin: 2rem auto 0;
+      font-size: 1rem;
+    }
+    .dropdown{
+      font-size: small;
+    }
+  }

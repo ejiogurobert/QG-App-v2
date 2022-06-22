@@ -12,10 +12,14 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
       rel="stylesheet"
     />
+    <link 
+  href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
+  rel="stylesheet"
+>
     <link rel="stylesheet" href="index.css" />
     <title>QG-App v2</title>
   </head>
-  <body onclick="cancel()">
+  <body>
     <div class="container">
       <!-- ==== Header section ==== -->
       <div class="header">
@@ -69,9 +73,18 @@
               <span class="iconify" data-icon="system-uicons:reuse"></span>
               Re-Generate
             </button>
-            <button class="btn-controls">
-              <span class="iconify" data-icon="charm:share"></span> Share
+            <button class="btn-controls" onclick="copyText()">
+              <span class="iconify" data-icon="cil:copy"></span> Copy Quote
             </button>
+          </section>
+
+          <section class="share">
+            <h2>Share  <span class="iconify" data-icon="bi:share"></span></h2>
+            <div class="shareon">
+              <a class="facebook" id="fb" data-text=""></a>
+              <a class="linkedin" id="li" data-text=""></a>
+              <a class="twitter" id="tw" data-text=""></a>
+          </div>
           </section>
         </div>
       </div>
@@ -89,4 +102,9 @@
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js"
+  defer
+  init
+></script>
 </html>

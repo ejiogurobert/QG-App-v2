@@ -7,6 +7,7 @@ const body = document.querySelector("body");
 const dropdown = document.querySelector(".dropdown");
 const cancelButton = document.querySelector('.exit-container');
 const serverUrl = 'http://127.0.0.1:1918/api/v1';
+const share = document.querySelector('.share');
 
 let selectedOption;
 
@@ -38,6 +39,11 @@ async function showDisplay() {
         const json = await response.json();
         console.log(json);
         displayTrumpQuote(json);
+        const facebook = document.querySelector('#fb');
+        const linkedin = document.querySelector('#li');
+        const twitter = document.querySelector('#tw');
+        console.log('facebook', facebook.data);
+        facebook.dataText = json.message;
       }  
     } catch (error) {
       console.log(error);
@@ -71,7 +77,7 @@ async function showDisplay() {
 // ==== Displaying Trump Quote on the page ====
 function displayTrumpQuote(data) {
   const quoteText = document.querySelector("#js-quote-text");
-  quoteText.innerHTML = `<p>${data.message}</p>`;
+  quoteText.innerHTML = `<p id="quoteContent">${data.message}</p>`;
    displayBox.style.display = 'block';
    body.style.background = 'rgba(0, 0, 0, 0.5)';
    dropdown.style.background = 'rgba(0, 0, 0, 0)';
@@ -84,7 +90,7 @@ function displayTrumpQuote(data) {
 // ==== Displaying Users Quote on the page ====
 function displayUsersQuote(data) {
   const quoteText = document.querySelector("#js-quote-text");
-  quoteText.innerHTML = `<p>${data.data.content}</p>`;
+  quoteText.innerHTML = `<p id="quoteContent">${data.data.content}</p>`;
    displayBox.style.display = 'block';
    body.style.background = 'rgba(0, 0, 0, 0.5)';
    dropdown.style.background = 'rgba(0, 0, 0, 0)';
@@ -98,6 +104,12 @@ function cancel() {
     displayBox.style.display = 'none';
     body.style.background = 'white'
     dropdown.style.background = 'white'
+}
+
+async function copyText () {
+  const quoteText = document.querySelector("#quoteContent").innerHTML;
+  await navigator.clipboard.writeText(quoteText);
+  alert('Copied to clipboard successfully!');
 }
 
 

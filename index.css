@@ -226,6 +226,10 @@ label {
   }
 
   /* ==== Media Queries ==== */
+@media (max-width: 1580px) {
+  
+}
+
 @media (max-width: 1282px) {
   .users {
     width: 50%;

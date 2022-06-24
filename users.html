@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="users.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>QG-App v2 - Users</title>
+  </head>
+  <body>
+    <section class="users">
+      <div class="user-section">
+        <form class="user-form" action="javascript:void(0)">
+          <h1>Add Your "Quote"</h1>
+          <div class="name">
+            <div class="name-type">
+                <label for="first-name">First Name</label>
+            </div>
+            <div>
+                <input id="first-name" required type="text" value="" />
+            </div>
+          </div>
+          <div class="name">
+            <div class="name-type">
+                <label for="last-name">Last Name </label>
+            </div>
+           <div>
+            <input id="last-name" type="text" value="" />
+           </div>
+          </div>
+          <textarea
+            class="user-quote"
+            name="user-quote"
+            id="user-quote"
+            cols="30"
+            rows="10"
+            placeholder="Please type your quote here"
+          ></textarea>
+          <div>
+            <input class="btn-submit" type="submit" />
+          </div>
+        </form>
+        <a href="./index.html">
+          <h2 class="home">
+            Go Back
+          </h2>
+        </a>
+      </div>
+    </section>
+  </body>
+  <script src="./users.js"></script>
+</html>

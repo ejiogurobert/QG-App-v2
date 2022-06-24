@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+  href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
+  rel="stylesheet"
+>
+    <link rel="stylesheet" href="index.css" />
+    <title>QG-App v2</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ==== Header section ==== -->
+      <div class="header">
+        <h1>
+          "Quotes"
+        </h1>
+        <h4>
+          Get random "Quotes" just for you
+        </h4>
+      </div>
+
+      <!-- ==== Form Section ==== -->
+      <div class="quotes-section">
+        <form>
+          <!-- ==== categories dropdown ==== -->
+          <label for="category">Quotes Category</label>
+          <select class="dropdown" name="category" id="category">
+            <option value="" hidden></option>
+            <option id="option-1" class="category-option" value="trump"
+              >Random Quotes From Donald Trump</option
+            >
+            <option id="option-2" class="category-option" value="users"
+              >Random Quotes From Users</option
+            >
+          </select>
+           <!-- ======SPINNER====== -->
+           <div class="spinner hidden" id="js-spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+          <section class="btn-section">
+            <button type="button" class="btn-generate">Generate</button>
+          </section>
+        </form>
+      </div>
+
+      <!-- ==== Generated Quote Section ==== -->
+      <div class="generated-quote_section">
+        <div class="generated-container">
+          <div class="exit-container">
+            <span
+              class="iconify btn-exit"
+              data-icon="material-symbols:cancel-outline-rounded"
+            ></span>
+          </div>
+          <section id="js-quote-text" class="quote"></section>
+
+          <section class="controls">
+            <button onclick="showDisplay()" class="btn-controls">
+              <span class="iconify" data-icon="system-uicons:reuse"></span>
+              Re-Generate
+            </button>
+            <button class="btn-controls" onclick="copyText()">
+              <span class="iconify" data-icon="cil:copy"></span> Copy Quote
+            </button>
+          </section>
+
+          <section class="share">
+            <h2>Share  <span class="iconify" data-icon="bi:share"></span></h2>
+            <div class="shareon">
+              <a class="facebook" id="fb" data-text=""></a>
+              <a class="linkedin" id="li" data-text=""></a>
+              <a class="twitter" id="tw" data-text=""></a>
+          </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ==== Users section ==== -->
+       <a href="./users.html">
+        <h2 class="users">
+          Add Your "Quotes"
+        </h2>
+       </a>
+      
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js"
+  defer
+  init
+></script>
+</html>
